@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import { UserVerifyService } from "../../services/user-verify.service";
+import { UserVerifyService } from "../../services/auth/user-verify.service";
 
 export class UserVerifyController {
     static async verifyEmail(req: Request, res: Response) {
