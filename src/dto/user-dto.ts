@@ -1,12 +1,12 @@
-import { IUser } from "../interfaces/auth-types";
+import { User } from "../entity/user/user-entity";
 
 export class UserDto {
     email: string;
     id: number | undefined;
     firstName: string;
-    lastName: string
+    lastName: string;
 
-    constructor(model: IUser) {
+    constructor(model: User) {
         this.email = model.email;
         this.id = model.id;
         this.firstName = model.firstName;

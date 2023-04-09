@@ -10,7 +10,7 @@
     "strict": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-
+    "strictPropertyInitialization": false
   },
   "exclude": ["node_modules"]
 }

@@ -1,14 +1,13 @@
 import { Request, Response } from "express";
 import { validationResult } from "express-validator";
 import { IUserLogin, IUserRegister } from "../../interfaces/auth-types";
-import { UserAuthService } from "../../services/user-auth.service";
-import { log } from "console";
+import { UserAuthService } from "../../services/auth/user-auth.service";
 
 
 export class UserAuthController {
     static async signUp (req: Request, res: Response) {
         try {
-            const errors = validationResult(req)
+            const errors = validationResult(req);
             if (errors["errors"].length) throw new Error("Invalid Registration Form");
 
             const registrationForm: IUserRegister = req.body;
