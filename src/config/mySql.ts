@@ -9,6 +9,9 @@ export const AppDataSource = new DataSource({
     username: "r9i066i647nwt4p64978",
     password: "pscale_pw_7DePWrFbPBfQa9ba5kRZCGjdaFqi2teqvksB8DW29JK",
     database: "mywebsite",
+    ssl: {
+        rejectUnauthorized: true,
+    },
     entities: [User, Post],
     synchronize: true,
     logging: false
