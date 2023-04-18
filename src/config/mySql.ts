@@ -11,5 +11,8 @@ export const AppDataSource = new DataSource({
   database: "mywebsite_dr6t",
     entities: [User, Post],
     synchronize: true,
-    logging: false
+    logging: false,
+     ssl: {
+    rejectUnauthorized: false
+  }
 })
