@@ -3,15 +3,12 @@ import { User } from "../entity/user/user-entity";
 import { Post } from "../entity/posts/posts-entity";
 
 export const AppDataSource = new DataSource({
-    type: "mysql",
-    host: "aws.connect.psdb.cloud",
-    port: 3306,
-    username: "r9i066i647nwt4p64978",
-    password: "pscale_pw_7DePWrFbPBfQa9ba5kRZCGjdaFqi2teqvksB8DW29JK",
-    database: "mywebsite",
-    ssl: {
-        rejectUnauthorized: true,
-    },
+     type: "postgres",
+     host: "dpg-cgv3j04s3fvmvqag17sg-a.frankfurt-postgres.render.com/",
+     port: 5432,
+  username: "grig",
+  password: "QEMaOaoi6UyeiyTaVX89AlwJfx1o275v",
+  database: "mywebsite_dr6t",
     entities: [User, Post],
     synchronize: true,
     logging: false
