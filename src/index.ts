@@ -1,4 +1,5 @@
 import app from "./app";
+import "reflect-metadata";
 import { AppDataSource } from "./config/mySql";
 import { envConfig } from "./config/env";
 import IndexRouter from "./routes/indexRouter";
