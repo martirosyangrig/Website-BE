@@ -1,4 +1,7 @@
 import { DataSource } from "typeorm";
+import { User } from "../entity/user/user-entity";
+import { Post } from "../entity/posts/posts-entity";
+import { UserPost1681543399480 } from "../migrations/1681543399480-user_post";
 
 export const AppDataSource = new DataSource({
     type: "postgres",
@@ -7,8 +10,8 @@ export const AppDataSource = new DataSource({
     username: "grig",
     password: "QEMaOaoi6UyeiyTaVX89AlwJfx1o275v",
     database: "mywebsite_dr6t",
-    entities: ["src/entity/**/*.ts"],
-    migrations: ["src/migrations/*.ts"],
+    entities: [User, Post],
+    migrations: [UserPost1681543399480],
     synchronize: false,
     logging: false,
     ssl: {
