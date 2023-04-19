@@ -1,4 +1,4 @@
-import { postRepository, userRepository } from "../../config/repositories";
+import { postRepository, userRepository } from "../../repositories";
 import { Post } from "../../entity/posts/posts-entity";
 import { User } from "../../entity/user/user-entity";
 import { IPost } from "../../interfaces/posts-types";

@@ -1,4 +1,4 @@
-import { userRepository } from "../../config/repositories";
+import { userRepository } from "../../repositories";
 import { User } from "../../entity/user/user-entity";
 
 export class UserService {
