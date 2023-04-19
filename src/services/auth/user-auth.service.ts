@@ -1,7 +1,7 @@
 import validate from "deep-email-validator";
 import bycript from "bcrypt"
 import { IUserLogin, IUserRegister } from "../../interfaces/auth-types";
-import { userRepository } from "../../config/repositories";
+import { userRepository } from "../../repositories";
 import { UserDto } from "../../dto/user-dto";
 import { generateToken } from "../../utils/tokenService";
 import { EmailService } from "../../utils/EmailSender";
@@ -20,13 +20,13 @@ export class UserAuthService {
             const newUser: User = userRepository.create({...registerForm, password: hashedPassword});
             await userRepository.save(newUser);
 
-            const userData: UserDto = new UserDto(newUser);
+            const userData = new UserDto(newUser);
             const emailToken = generateToken({...userData});
 
             const emailService = new EmailService();
             await emailService.sendVerifyEmail(userData, emailToken)
 
-            return userData;
+            return userData;    
         } catch (error) {
             throw new Error(`${error}`);
         }

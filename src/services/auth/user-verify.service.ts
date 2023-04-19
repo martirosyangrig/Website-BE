@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 import { envConfig } from "../../config/env";
-import { userRepository } from "../../config/repositories";
+import { userRepository } from "../../repositories";
 import { IPayload } from "../../interfaces/token-payload";
 import { User } from "../../entity/user/user-entity";
 
