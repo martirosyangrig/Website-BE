@@ -13,5 +13,8 @@
     "moduleResolution": "Node",
     "strictPropertyInitialization": false
   },
+  "ts-node": {
+    "files": true
+  },
   "exclude": ["node_modules", "test", "dist", "**/*spec.ts", "src/migration/**/*.ts", "src/entity/**/*.ts"]
 }

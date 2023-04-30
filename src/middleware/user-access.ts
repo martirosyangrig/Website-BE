@@ -3,7 +3,7 @@ import { NextFunction, Request, Response } from "express";
 import { envConfig } from '../config/env';
 
 export class UserAccess {
-    static async veryifyUser (req: any, res: Response, next: NextFunction) {
+    static async veryifyUser (req: Request, res: Response, next: NextFunction) {
         try {
             const accessToken = req.header('Authorization')?.split(' ')[1]
             if (!accessToken) throw new Error('AccessToken not found!');
